@@ -11,7 +11,7 @@ import { sortNumbers } from './sort-numbers.js';
 */
 
 console.log(sortNumbers([1, 2, 3])); // [1,2,3]
-// Trying something
+// Trying something else
 
 const anArray = [1, 0, -1];
 console.log(sortNumbers(anArray) !== anArray); // true, returns a new array
