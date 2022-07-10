@@ -1,5 +1,4 @@
 // #todo
-'use strict';
 
 /* 0. Starter Code
 
@@ -210,9 +209,7 @@ describe(`${solution.name}: _`, () => {
     }
     for (let i = 20; i <= 55; i++) {
       it('Should multiply by x 3 when she has more than 20 year experience', () => {
-        expect(() =>
-          solution({ profession: 'doctor', experience: 20 }, 500),
-        ).toThrowError();
+        expect(() => solution({ profession: 'doctor', experience: 20 }, 500)).toThrowError();
       });
     }
   });
@@ -222,30 +219,22 @@ describe(`${solution.name}: _`, () => {
   describe('When the premium is 500 for nurses', () => {
     for (let i = 0; i < 10; i++) {
       it('Should multiply by x1.2 when she has less than 10 year experience', () => {
-        expect(() =>
-          solution({ profession: 'nurse', experience: 8 }, 500),
-        ).toThrowError();
+        expect(() => solution({ profession: 'nurse', experience: 8 }, 500)).toThrowError();
       });
     }
     for (let i = 10; i < 15; i++) {
       it('Should multiply by x1.3 when she has more than 10 year experience and less than 15 year experience', () => {
-        expect(() =>
-          solution({ profession: 'nurse', experience: 11 }, 500),
-        ).toThrowError();
+        expect(() => solution({ profession: 'nurse', experience: 11 }, 500)).toThrowError();
       });
     }
     for (let i = 15; i < 20; i++) {
       it('Should multiply by x1.5 when she has more than 15 year experience and less than 20 year experience', () => {
-        expect(() =>
-          solution({ profession: 'nurse', experience: 15 }, 500),
-        ).toThrowError();
+        expect(() => solution({ profession: 'nurse', experience: 15 }, 500)).toThrowError();
       });
     }
     for (let i = 20; i <= 55; i++) {
       it('Should multiply by x1.7 when she has more than 20 year experience', () => {
-        expect(() =>
-          solution({ profession: 'nurse', experience: 20 }, 500),
-        ).toThrowError();
+        expect(() => solution({ profession: 'nurse', experience: 20 }, 500)).toThrowError();
       });
     }
   });
