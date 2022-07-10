@@ -6,28 +6,28 @@
 
 // =============== JSDoc description of the challenge ===============
 /**
-* The government is issuing corona money to healthcareworkers
-* The actual premium has not been decided yet
-* For doctors, the rules are as following:
-*  Less than 10-year experience: x1,5
-*  More than 10 or equal: x2
-*  More than 20 or equal: x3
-*  Never more than: 1000 (throw an error)
-* For nurses:
-*  Less than 10-year experience: x1,2
-*  More than 10 or equal: x1,3
-*  More than 15 or equal: x1,5
-*  More than 20 or equal: x1,7
-*  Never more than: 500 (throw an error)
-* Any other profession should not get a premium (but no error should be thrown)
-*
-* {
+ * The government is issuing corona money to healthcareworkers
+ * The actual premium has not been decided yet
+ * For doctors, the rules are as following:
+ *  Less than 10-year experience: x1,5
+ *  More than 10 or equal: x2
+ *  More than 20 or equal: x3
+ *  Never more than: 1000 (throw an error)
+ * For nurses:
+ *  Less than 10-year experience: x1,2
+ *  More than 10 or equal: x1,3
+ *  More than 15 or equal: x1,5
+ *  More than 20 or equal: x1,7
+ *  Never more than: 500 (throw an error)
+ * Any other profession should not get a premium (but no error should be thrown).
+ *
+ * {
     profession: "nurse" | "doctor" | "therapist" | "psychologist" ,
     experience: 11
-}
-*/
+}.
+ */
 
-/**
+/** .....................
  * Calculate the premium for healthcareworkers
  *
  * @param {object} - The healthcareworker object that is passed to the function
@@ -355,15 +355,15 @@ describe(`${solution.name}: _`, () => {
   describe('When the premium is 500 for therapist', () => {
     it('Should zero premium for therapist profession',
       () => {
-        expect((solution({ profession: 'therapist', experience: 8 }, 500))).toBe(0);
+        expect(solution({ profession: 'therapist', experience: 8 }, 500)).toBe(0);
       });
     it('Should zero premium for therapist profession',
       () => {
-        expect((solution({ profession: 'therapist', experience: 11 }, 500))).toBe(0);
+        expect(solution({ profession: 'therapist', experience: 11 }, 500)).toBe(0);
       });
     it('Should zero premium for therapist profession',
       () => {
-        expect((solution({ profession: 'therapist', experience: 20 }, 500))).toBe(0);
+        expect(solution({ profession: 'therapist', experience: 20 }, 500)).toBe(0);
       });
   });
 });
