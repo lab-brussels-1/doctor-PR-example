@@ -223,7 +223,7 @@ describe(solution.name + ': _', () => {
   });
 });
 
-// psychologist and therapist 
+// psychologist and therapist
 
 describe(solution.name + ': _', () => {
   describe('premium for psychologist', () => {
