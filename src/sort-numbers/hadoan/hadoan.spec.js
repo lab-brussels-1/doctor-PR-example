@@ -100,9 +100,7 @@ for (const solution of [bonus]) {
             );
           });
           it('600 * 2 = ERROR', () => {
-            expect(() =>
-              solution({ profession: 'doctor', experience: i }, 600),
-            ).toThrowError(new Error('doctor bonus greater than 1000'));
+            expect(() => solution({ profession: 'doctor', experience: i }, 600)).toThrowError(new Error('doctor bonus greater than 1000'));
           });
         }
       });
@@ -114,14 +112,10 @@ for (const solution of [bonus]) {
             );
           });
           it('400 * 3 = ERROR', () => {
-            expect(() =>
-              solution({ profession: 'doctor', experience: i }, 400),
-            ).toThrowError(new Error('doctor bonus greater than 1000'));
+            expect(() => solution({ profession: 'doctor', experience: i }, 400)).toThrowError(new Error('doctor bonus greater than 1000'));
           });
           it('600 * 3 = ERROR', () => {
-            expect(() =>
-              solution({ profession: 'doctor', experience: i }, 600),
-            ).toThrowError(new Error('doctor bonus greater than 1000'));
+            expect(() => solution({ profession: 'doctor', experience: i }, 600)).toThrowError(new Error('doctor bonus greater than 1000'));
           });
         }
       });
@@ -140,9 +134,7 @@ for (const solution of [bonus]) {
             );
           });
           it('return 600 * 1.2 = ERROR for less than 10y exp', () => {
-            expect(() =>
-              solution({ profession: 'nurse', experience: i }, 600),
-            ).toThrowError(new Error('nurse bonus greater than 500'));
+            expect(() => solution({ profession: 'nurse', experience: i }, 600)).toThrowError(new Error('nurse bonus greater than 500'));
           });
         }
       });
@@ -153,35 +145,17 @@ for (const solution of [bonus]) {
               260,
             );
           });
-          it('400 * 1.3 = ERROR', () => {
-            expect(() =>
-              solution({ profession: 'nurse', experience: i }, 400),
-            ).toThrowError(new Error('nurse bonus greater than 500'));
-          });
-          it('600 * 1.3 = ERROR', () => {
-            expect(() =>
-              solution({ profession: 'nurse', experience: i }, 600),
-            ).toThrowError(new Error('nurse bonus greater than 500'));
-          });
+          it('400 * 1.3 = ERROR', () => { expect(() => solution({ profession: 'nurse', experience: i }, 400)).toThrowError(new Error('nurse bonus greater than 500')); });
+          it('600 * 1.3 = ERROR', () => { expect(() => solution({ profession: 'nurse', experience: i }, 600)).toThrowError(new Error('nurse bonus greater than 500')); });
         }
       });
       describe('gives correct bonus to nurses with 15 to 19 years of exp', () => {
         for (let i = 15; i < 20; i++) {
-          it('200 * 1.5 = 300', () => {
-            expect(solution({ profession: 'nurse', experience: i }, 200)).toBe(
-              300,
-            );
-          });
+          it('200 * 1.5 = 300', () => { expect(solution({ profession: 'nurse', experience: i }, 200)).toBe(300); });
           it('400 * 1.5 = ERROR', () => {
-            expect(() =>
-              solution({ profession: 'nurse', experience: i }, 400),
-            ).toThrowError(new Error('nurse bonus greater than 500'));
+            expect(() => solution({ profession: 'nurse', experience: i }, 400)).toThrowError(new Error('nurse bonus greater than 500'));
           });
-          it('600 * 1.5 = ERROR', () => {
-            expect(() =>
-              solution({ profession: 'nurse', experience: i }, 600),
-            ).toThrowError(new Error('nurse bonus greater than 500'));
-          });
+          it('600 * 1.5 = ERROR', () => { expect(() => solution({ profession: 'nurse', experience: i }, 600)).toThrowError(new Error('nurse bonus greater than 500')); });
         }
       });
       describe('gives correct bonus to nurses with 20 or more years of exp upto 55y', () => {
@@ -191,16 +165,8 @@ for (const solution of [bonus]) {
               340,
             );
           });
-          it('400 * 1.7 = ERROR', () => {
-            expect(() =>
-              solution({ profession: 'nurse', experience: i }, 400),
-            ).toThrowError(new Error('nurse bonus greater than 500'));
-          });
-          it('600 * 1.7 = ERROR', () => {
-            expect(() =>
-              solution({ profession: 'nurse', experience: i }, 600),
-            ).toThrowError(new Error('nurse bonus greater than 500'));
-          });
+          it('400 * 1.7 = ERROR', () => { expect(() => solution({ profession: 'nurse', experience: i }, 400)).toThrowError(new Error('nurse bonus greater than 500')); });
+          it('600 * 1.7 = ERROR', () => { expect(() => solution({ profession: 'nurse', experience: i }, 600)).toThrowError(new Error('nurse bonus greater than 500')); });
         }
       });
     });
