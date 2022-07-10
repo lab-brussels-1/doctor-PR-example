@@ -44,7 +44,7 @@ const solution = (healthCareWorker = {}, percentage) => {
 
 // Testing for 200
 
-describe(solution.name + ': _', () => {
+describe(`${solution.name}: _`, () => {
   describe('premium for doctors', () => {
     describe('When the premium is 150', () => {
       it('Should multiply by x 1.5 when she has less than 10 year experience', () => {
@@ -66,7 +66,7 @@ describe(solution.name + ': _', () => {
   });
 });
 
-describe(solution.name + ': _', () => {
+describe(`${solution.name}: _`, () => {
   describe('premium for nurses', () => {
     describe('When the premium is 200', () => {
       it('Should multiply by x1.2 when she has less than 10 year experience', () => {
@@ -93,7 +93,7 @@ describe(solution.name + ': _', () => {
 
 // Testing for 350
 
-describe(solution.name + ': _', () => {
+describe(`${solution.name}: _`, () => {
   describe('premium for doctors', () => {
     describe('When the premium is 350', () => {
       it('Should multiply by x 1.5 when she has less than 10 year experience', () => {
@@ -115,7 +115,7 @@ describe(solution.name + ': _', () => {
   });
 });
 
-describe(solution.name + ': _', () => {
+describe(`${solution.name}: _`, () => {
   describe('premium for nurses', () => {
     describe('When the premium is 300', () => {
       it('Should multiply by x1.2 when she has less than 10 year experience', () => {
@@ -142,7 +142,7 @@ describe(solution.name + ': _', () => {
 
 // Testing for 500
 
-describe(solution.name + ': _', () => {
+describe(`${solution.name}: _`, () => {
   describe('premium for doctors', () => {
     describe('When the premium is 500', () => {
       it('Should multiply by x 1.5 when she has less than 10 year experience', () => {
@@ -154,7 +154,7 @@ describe(solution.name + ': _', () => {
   });
 });
 
-describe(solution.name + ': _', () => {
+describe(`${solution.name}: _`, () => {
   describe('premium for nurses', () => {
     describe('When the premium is 500', () => {
       it('Should multiply by x 2 when she has more than 10 year experience', () => {
@@ -168,7 +168,7 @@ describe(solution.name + ': _', () => {
 
 // psychologist and therapist
 
-describe(solution.name + ': _', () => {
+describe(`${solution.name}: _`, () => {
   describe('premium for psychologist', () => {
     describe('When the premium is 200', () => {
       it('Should zero premium for psychologist profession', () => {
@@ -180,7 +180,7 @@ describe(solution.name + ': _', () => {
   });
 });
 
-describe(solution.name + ': _', () => {
+describe(`${solution.name}: _`, () => {
   describe('premium for psychologist', () => {
     describe('When the premium is 300', () => {
       it('Should zero premium for psychologist profession', () => {
@@ -192,7 +192,7 @@ describe(solution.name + ': _', () => {
   });
 });
 
-describe(solution.name + ': _', () => {
+describe(`${solution.name}: _`, () => {
   describe('premium for psychologist', () => {
     describe('When the premium is 500', () => {
       it('Should zero premium for psychologist profession', () => {
@@ -254,44 +254,39 @@ describe(solution.name + ': _', () => {
 
 // TESTING ERROR
 
-describe(solution.name + ': _', () => {
+describe(`${solution.name}: _`, () => {
   describe('premium for nurses', () => {
     describe('When the premium is 500', () => {
       it('Should multiply by x 3 when she has 20 year experience, if premium more then 500 throw error', () => {
-        expect(() =>
-          solution({ profession: 'doctor', experience: 20 }, 500),
-        ).toThrowError();
+        expect(() => solution({ profession: 'doctor', experience: 20 }, 500)).toThrowError();
       });
     });
   });
 });
 
-describe(solution.name + ': _', () => {
+describe(`${solution.name}: _`, () => {
   describe('premium for nurses', () => {
     describe('When the premium is 500', () => {
       it('Should multiply by x1.7 when she has less than 10 year experience, if premium more then 500 throw error', () => {
-        expect(() =>
-          solution({ profession: 'doctor', experience: 20 }, 500),
-        ).toThrowError();
+        expect(() => solution({ profession: 'doctor', experience: 20 }, 500)).toThrowError();
       });
     });
   });
 });
 
-describe(solution.name + ': _', () => {
+describe(`${solution.name}: _`, () => {
   describe('premium for nurses', () => {
     describe('When the premium is 500', () => {
       it('Should multiply by x1.2 when she has less than 10 year experience, if premium more then 500 throw error', () => {
-        expect(() =>
-          solution({ profession: 'nurse', experience: 8 }, 500),
-        ).toThrowError();
+        expect(() => solution({ profession: 'nurse', experience: 8 }, 500)).toThrowError();
       });
     });
   });
 });
 
 const letSomething = (a) => {
-  return 'something ' + a;
+  return `something ${a}`;
 };
 
+// eslint-disable-next-line no-unused-vars
 const str = letSomething('like this');
