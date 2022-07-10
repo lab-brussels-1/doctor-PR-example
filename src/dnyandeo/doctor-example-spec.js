@@ -1,30 +1,35 @@
+/* eslint-disable sonarjs/no-duplicate-string */
+/* eslint-disable no-undef */
 // #todo
 
-'use strict';
+/* 0. Starter Code
+ */
 
-/* 0. Starter Code // =============== JSDoc description of the challenge ===============
-* The government is issuing corona money to healthcareworkers  
-* The actual premium has not been decided yet  
-* For doctors, the rules are as following:
-*  Less than 10-year experience: x1,5
-*  More than 10 or equal: x2
-*  More than 20 or equal: x3
-*  Never more than: 1000 (throw an error)
-* For nurses:
-*  Less than 10-year experience: x1,2
-*  More than 10 or equal: x1,3
-*  More than 15 or equal: x1,5
-*  More than 20 or equal: x1,7
-*  Never more than: 500 (throw an error)
-* Any other profession should not get a premium (but no error should be thrown)
-*
-* {
+// =============== JSDoc description of the challenge ===============
+/** .......
+ * The government is issuing corona money to healthcareworkers
+ * The actual premium has not been decided yet
+ * For doctors, the rules are as following:
+ *  Less than 10-year experience: x1,5
+ *  More than 10 or equal: x2
+ *  More than 20 or equal: x3
+ *  Never more than: 1000 (throw an error)
+ * For nurses:
+ *  Less than 10-year experience: x1,2
+ *  More than 10 or equal: x1,3
+ *  More than 15 or equal: x1,5
+ *  More than 20 or equal: x1,7
+ *  Never more than: 500 (throw an error)
+ * Any other profession should not get a premium (but no error should be thrown).
+ *
+ * {
     profession: "nurse" | "doctor" | "therapist" | "psychologist" ,
     experience: 11
-}
- * 
+}.
+
+/**
  * Calculate the premium for healthcareworkers
- * 
+ *
  * @param {object} - The healthcareworker object that is passed to the function
  * @param {number} - The base premium
  * @return {number} The premium rounded down to an integer~
@@ -68,7 +73,7 @@ const solution = (healthCareWorker = {}, percentage) => {
     }
 
     if (premium > 1000) {
-      throw new Error(`Premium is more then 1000`);
+      throw new Error('Premium is more then 1000');
     }
   }
 
@@ -84,7 +89,7 @@ const solution = (healthCareWorker = {}, percentage) => {
     }
 
     if (premium > 500) {
-      throw new Error(`Premium is more then 500`);
+      throw new Error('Premium is more then 500');
     }
   }
   return premium;
@@ -94,7 +99,7 @@ const solution = (healthCareWorker = {}, percentage) => {
 
 // ================= Base on 200 Euro ======================
 
-describe(solution.name + ': _', () => {
+describe(`${solution.name}: _`, () => {
   describe('premium for doctors', () => {
     describe('When the premium is 200', () => {
       it('Should multiply by x 1.5 when she has less than 10 year experience', () => {
@@ -116,7 +121,7 @@ describe(solution.name + ': _', () => {
   });
 });
 
-describe(solution.name + ': _', () => {
+describe(`${solution.name}: _`, () => {
   describe('premium for nurses', () => {
     describe('When the premium is 200', () => {
       it('Should multiply by x1.2 when she has less than 10 year experience', () => {
@@ -143,7 +148,7 @@ describe(solution.name + ': _', () => {
 
 // ================== base on 300 Euro ========================
 
-describe(solution.name + ': _', () => {
+describe(`${solution.name}: _`, () => {
   describe('premium for doctors', () => {
     describe('When the premium is 300', () => {
       it('Should multiply by x 1.5 when she has less than 10 year experience', () => {
@@ -165,7 +170,7 @@ describe(solution.name + ': _', () => {
   });
 });
 
-describe(solution.name + ': _', () => {
+describe(`${solution.name}: _`, () => {
   describe('premium for nurses', () => {
     describe('When the premium is 300', () => {
       it('Should multiply by x1.2 when she has less than 10 year experience', () => {
@@ -192,7 +197,7 @@ describe(solution.name + ': _', () => {
 
 // ========================== Base on 500 Euro =================================
 
-describe(solution.name + ': _', () => {
+describe(`${solution.name}: _`, () => {
   describe('premium for doctors', () => {
     describe('When the premium is 500', () => {
       it('Should multiply by x 1.5 when she has less than 10 year experience', () => {
@@ -204,7 +209,7 @@ describe(solution.name + ': _', () => {
   });
 });
 
-describe(solution.name + ': _', () => {
+describe(`${solution.name}: _`, () => {
   describe('premium for nurses', () => {
     describe('When the premium is 500', () => {
       it('Should multiply by x 2 when she has more than 10 year experience', () => {
@@ -218,7 +223,7 @@ describe(solution.name + ': _', () => {
 
 // ========== Other profession like psychologist and therapist =====================
 
-describe(solution.name + ': _', () => {
+describe(`${solution.name}: _`, () => {
   describe('premium for psychologist', () => {
     describe('When the premium is 200', () => {
       it('Should zero premium for psychologist profession', () => {
@@ -230,7 +235,7 @@ describe(solution.name + ': _', () => {
   });
 });
 
-describe(solution.name + ': _', () => {
+describe(`${solution.name}: _`, () => {
   describe('premium for psychologist', () => {
     describe('When the premium is 300', () => {
       it('Should zero premium for psychologist profession', () => {
@@ -242,7 +247,7 @@ describe(solution.name + ': _', () => {
   });
 });
 
-describe(solution.name + ': _', () => {
+describe(`${solution.name}: _`, () => {
   describe('premium for psychologist', () => {
     describe('When the premium is 500', () => {
       it('Should zero premium for psychologist profession', () => {
@@ -254,7 +259,7 @@ describe(solution.name + ': _', () => {
   });
 });
 
-describe(solution.name + ': _', () => {
+describe(`${solution.name}: _`, () => {
   describe('premium for psychologist', () => {
     describe('When the premium is 500', () => {
       it('Should zero premium for psychologist profession', () => {
@@ -266,7 +271,7 @@ describe(solution.name + ': _', () => {
   });
 });
 
-describe(solution.name + ': _', () => {
+describe(`${solution.name}: _`, () => {
   describe('premium for therapist', () => {
     describe('When the premium is 200', () => {
       it('Should zero premium for therapist profession', () => {
@@ -278,7 +283,7 @@ describe(solution.name + ': _', () => {
   });
 });
 
-describe(solution.name + ': _', () => {
+describe(`${solution.name}: _`, () => {
   describe('premium for therapist', () => {
     describe('When the premium is 300', () => {
       it('Should zero premium for therapist profession', () => {
@@ -290,7 +295,7 @@ describe(solution.name + ': _', () => {
   });
 });
 
-describe(solution.name + ': _', () => {
+describe(`${solution.name}: _`, () => {
   describe('premium for therapist', () => {
     describe('When the premium is 500', () => {
       it('Should zero premium for therapist profession', () => {
@@ -304,7 +309,7 @@ describe(solution.name + ': _', () => {
 
 // ============================ Error testing =============================
 
-describe(solution.name + ': _', () => {
+describe(`${solution.name}: _`, () => {
   describe('premium for nurses', () => {
     describe('When the premium is 500', () => {
       it('Should multiply by x 3 when she has 20 year experience, if premium more then 500 throw error', () => {
@@ -316,7 +321,7 @@ describe(solution.name + ': _', () => {
   });
 });
 
-describe(solution.name + ': _', () => {
+describe(`${solution.name}: _`, () => {
   describe('premium for nurses', () => {
     describe('When the premium is 500', () => {
       it('Should multiply by x1.7 when she has less than 10 year experience, if premium more then 500 throw error', () => {
@@ -328,7 +333,7 @@ describe(solution.name + ': _', () => {
   });
 });
 
-describe(solution.name + ': _', () => {
+describe(`${solution.name}: _`, () => {
   describe('premium for nurses', () => {
     describe('When the premium is 500', () => {
       it('Should multiply by x1.2 when she has less than 10 year experience, if premium more then 500 throw error', () => {
@@ -339,10 +344,3 @@ describe(solution.name + ': _', () => {
     });
   });
 });
-
-const letSomething = (a) => {
-  return 'something ' + a;
-};
-
-let str = letSomething('like this');
-console.log(str);
