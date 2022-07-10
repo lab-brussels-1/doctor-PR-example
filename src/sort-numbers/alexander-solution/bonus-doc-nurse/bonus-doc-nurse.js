@@ -1,7 +1,7 @@
 // eslint-disable-next-line sonarjs/cognitive-complexity
 export const bonus = (employee, premium) => {
   let bonuses = 0;
-  const overPriced= 'Too much dough'
+  const overPriced = 'Too much dough';
   if (employee.profession === 'doctor' && employee.experience < 10) {
     bonuses = premium * 1.5;
   } else if (employee.profession === 'doctor' && employee.experience >= 10) {
