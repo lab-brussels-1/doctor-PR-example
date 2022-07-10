@@ -22,7 +22,68 @@
  */
 
 // =============== your solutions will go here ===============
+function bonus(employee, premium) {
+  let bonuses = 0;
 
+  if (employee.profession === 'doctor' && employee.experience < 10) {
+    bonuses = premium * 1.5;
+  } else if (
+    employee.profession === 'doctor' &&
+    employee.experience >= 10 &&
+    employee.experience < 20
+  ) {
+    bonuses = premium * 2;
+    if (bonuses >= 1000) {
+      throw new Error('Too much dough');
+    }
+  } else if (
+    employee.profession === 'doctor' &&
+    employee.experience >= 20 &&
+    employee.experience < 55
+  ) {
+    bonuses = premium * 3;
+    if (bonuses >= 1000) {
+      throw new Error('Too much dough');
+    }
+  } else if (employee.profession === 'nurse' && employee.experience < 10) {
+    bonuses = premium * 1.2;
+
+    if (bonuses >= 500) {
+      throw new Error('Too much dough');
+    }
+  } else if (
+    employee.profession === 'nurse' &&
+    employee.experience >= 10 &&
+    employee.experience < 15
+  ) {
+    bonuses = premium * 1.3;
+
+    if (bonuses >= 500) {
+      throw new Error('Too much dough');
+    }
+  } else if (
+    employee.profession === 'nurse' &&
+    employee.experience >= 15 &&
+    employee.experience < 20
+  ) {
+    bonuses = premium * 1.5;
+
+    if (bonuses >= 500) {
+      throw new Error('Too much dough');
+    }
+  } else if (employee.profession === 'nurse' && employee.experience >= 20) {
+    bonuses = premium * 1.7;
+    if (bonuses >= 500) {
+      throw new Error('Too much dough');
+    }
+  } else if (
+    employee.profession !== 'nurse' ||
+    employee.profession !== 'doctor'
+  ) {
+    return 'Invalid Profession';
+  }
+  return Math.floor(bonuses);
+}
 /**
  * @param employee
  * @param premium
@@ -31,7 +92,7 @@
 // =============== a for-of loop to control which solution(s) are tested ===============
 
 // eslint-disable-next-line no-restricted-syntax
-import { bonus } from './bonus-doc-nurse.js';
+//import { bonus } from './bonus-doc-nurse.js';
 
 for (const solution of [bonus]) {
   // =============== test cases for this challenge ===============
