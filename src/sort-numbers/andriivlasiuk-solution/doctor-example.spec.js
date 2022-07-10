@@ -37,6 +37,7 @@ const dataBase = {
 };
 
 // =============== your solutions will go here ===============
+// eslint-disable-next-line sonarjs/cognitive-complexity
 const calculatePremium = (employee = {}, premium = 0) => {
   let payout = 0;
   if (employee.profession === 'doctor') {
