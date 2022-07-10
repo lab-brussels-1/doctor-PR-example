@@ -2,13 +2,7 @@
 
 'use strict';
 
-/* 0. Starter Code
-
-
-*/
-
-// =============== JSDoc description of the challenge ===============
-/** 
+/* 0. Starter Code // =============== JSDoc description of the challenge ===============
 * The government is issuing corona money to healthcareworkers  
 * The actual premium has not been decided yet  
 * For doctors, the rules are as following:
@@ -28,12 +22,9 @@
     profession: "nurse" | "doctor" | "therapist" | "psychologist" ,
     experience: 11
 }
-
-    
-  
-/**
+ * 
  * Calculate the premium for healthcareworkers
- *
+ * 
  * @param {object} - The healthcareworker object that is passed to the function
  * @param {number} - The base premium
  * @return {number} The premium rounded down to an integer~
