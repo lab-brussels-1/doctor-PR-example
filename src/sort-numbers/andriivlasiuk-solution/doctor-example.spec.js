@@ -30,7 +30,6 @@
 }
 */
 
-
 /**
  * Calculate the premium for healthcare workers
  *
@@ -38,12 +37,10 @@
  * @param {number} - The base premium
  * @return {number} The premium rounded down to an integer~
  */
-const dataBase =  {
-  profession: ["nurse" , "doctor" , "therapist" , "psychologist"] ,
-  
-}
+const dataBase = {
+  profession: ['nurse', 'doctor', 'therapist', 'psychologist'],
+};
 // =============== your solutions will go here ===============
-
 
 // =============== a for-of loop to control which solution(s) are tested ===============
 
@@ -156,8 +153,6 @@ describe('Calculate correct bonus for all nurses with experience more than 20 ti
   });
 });
 }
-
-
 
 // =============== a minified solution you can use to test your test cases ===============
 
