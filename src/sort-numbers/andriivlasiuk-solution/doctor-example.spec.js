@@ -167,9 +167,7 @@ for (const solution of [calculatePremium]) {
     describe('Calculate correct bonus for all nurses with experience 10 to 14 years', () => {
       for (let i = 10; i < 15; i++) {
         it('If experience more than 10 years its should multiply by x 1,3, if bonus = 200 x 1,3 = 260', () => {
-          expect(solution({ profession: 'nurse', experience: i }, 200)).toBe(
-            260,
-          );
+          expect(solution({ profession: 'nurse', experience: i }, 200)).toBe(260);
         });
         it('If bonus 400 x 1,3 = 520 --> Throw an error nurse bonus never can be more than: 500', () => {
           expect(() => solution({ profession: 'nurse', experience: i }, 400)).toThrowError(new Error('nurse bonus greater than 500'));
@@ -182,9 +180,7 @@ for (const solution of [calculatePremium]) {
     describe('Calculate correct bonus for all nurses with experience 15 to 19 years', () => {
       for (let i = 15; i < 20; i++) {
         it('If experience more than 15 years its should multiply by x 1.5, if bonus = 200 x 1.5 = 300', () => {
-          expect(solution({ profession: 'nurse', experience: i }, 200)).toBe(
-            300,
-          );
+          expect(solution({ profession: 'nurse', experience: i }, 200)).toBe(300);
         });
         it('If bonus 400 x 1.5 = 600 --> Throw an error nurse bonus never can be more than: 500', () => {
           expect(() => solution({ profession: 'nurse', experience: i }, 400)).toThrowError(new Error('nurse bonus greater than 500'));
