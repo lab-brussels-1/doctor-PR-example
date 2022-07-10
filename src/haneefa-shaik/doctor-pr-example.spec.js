@@ -27,7 +27,7 @@
 }.
  */
 
-/** .....................
+/** ................................
  * Calculate the premium for healthcareworkers
  *
  * @param {object} - The healthcareworker object that is passed to the function
