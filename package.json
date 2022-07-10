@@ -8,7 +8,8 @@
     "lint:ls": "ls-lint",
     "lint:md": "markdownlint --ignore node_modules --ignore docs --config ./.markdownlint.jsonc --fix ./ ",
     "test": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js --passWithNoTests --coverage ",
-    "spell-check": "cspell  './**'"
+    "spell-check": "cspell  './**'",
+    "lint:fix": "eslint --fix --ext .js,.jsx ."
   },
   "type": "module",
   "repository": {

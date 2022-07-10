@@ -28,18 +28,18 @@ const bonus = (employee, premium) => {
   if (employee.profession === 'doctor' && employee.experience < 10) {
     bonuses = premium * 1.5;
   } else if (
-    employee.profession === 'doctor' &&
-    employee.experience >= 10 &&
-    employee.experience < 20
+    employee.profession === 'doctor'
+    && employee.experience >= 10
+    && employee.experience < 20
   ) {
     bonuses = premium * 2;
     if (bonuses >= 1000) {
       throw new Error('Too much dough');
     }
   } else if (
-    employee.profession === 'doctor' &&
-    employee.experience >= 20 &&
-    employee.experience < 55
+    employee.profession === 'doctor'
+    && employee.experience >= 20
+    && employee.experience < 55
   ) {
     bonuses = premium * 3;
     if (bonuses >= 1000) {
@@ -52,9 +52,9 @@ const bonus = (employee, premium) => {
       throw new Error('Too much dough');
     }
   } else if (
-    employee.profession === 'nurse' &&
-    employee.experience >= 10 &&
-    employee.experience < 15
+    employee.profession === 'nurse'
+    && employee.experience >= 10
+    && employee.experience < 15
   ) {
     bonuses = premium * 1.3;
 
@@ -62,9 +62,9 @@ const bonus = (employee, premium) => {
       throw new Error('Too much dough');
     }
   } else if (
-    employee.profession === 'nurse' &&
-    employee.experience >= 15 &&
-    employee.experience < 20
+    employee.profession === 'nurse'
+    && employee.experience >= 15
+    && employee.experience < 20
   ) {
     bonuses = premium * 1.5;
 
@@ -77,8 +77,8 @@ const bonus = (employee, premium) => {
       throw new Error('Too much dough');
     }
   } else if (
-    employee.profession !== 'nurse' ||
-    employee.profession !== 'doctor'
+    employee.profession !== 'nurse'
+    || employee.profession !== 'doctor'
   ) {
     return 'Invalid Profession';
   }
@@ -92,7 +92,7 @@ const bonus = (employee, premium) => {
 // =============== a for-of loop to control which solution(s) are tested ===============
 
 // eslint-disable-next-line no-restricted-syntax
-//import { bonus } from './bonus-doc-nurse.js';
+// import { bonus } from './bonus-doc-nurse.js';
 
 for (const solution of [bonus]) {
   // =============== test cases for this challenge ===============
@@ -111,8 +111,7 @@ for (const solution of [bonus]) {
             );
           });
           it('should throw an error if the money is more than 500', () => {
-            expect(() => solution({ profession: 'nurse', experience: i }, 600),
-            ).toThrowError(new Error('Too much dough'));
+            expect(() => solution({ profession: 'nurse', experience: i }, 600)).toThrowError(new Error('Too much dough'));
           });
         }
       });
@@ -129,159 +128,141 @@ for (const solution of [bonus]) {
             );
           });
           it('should throw an error if the money is more than 500', () => {
-            expect(() =>
-              solution({ profession: 'nurse', experience: i }, 400)
-            ).toThrowError(new Error("Too much dough"));
+            expect(() => solution({ profession: 'nurse', experience: i }, 400)).toThrowError(new Error('Too much dough'));
           });
-          it("should thow an error if the money is more than 500", () => {
-            expect(() =>
-              solution({ profession: "nurse", experience: i }, 600)
-            ).toThrowError(new Error("Too much dough"));
+          it('should thow an error if the money is more than 500', () => {
+            expect(() => solution({ profession: 'nurse', experience: i }, 600)).toThrowError(new Error('Too much dough'));
           });
         }
       });
-      describe("calculate the bonus for nurses with more than 15 years of experience", () => {
+      describe('calculate the bonus for nurses with more than 15 years of experience', () => {
         for (let i = 15; i < 20; i++) {
-          it("should multiply the bonus with 1.5 for 200", () => {
-            expect(solution({ profession: "nurse", experience: i }, 200)).toBe(
-              300
+          it('should multiply the bonus with 1.5 for 200', () => {
+            expect(solution({ profession: 'nurse', experience: i }, 200)).toBe(
+              300,
             );
           });
-          it("should multiply the bonus with 1.5 for 200", () => {
-            expect(solution({ profession: "nurse", experience: 15 }, 200)).toBe(
-              300
+          it('should multiply the bonus with 1.5 for 200', () => {
+            expect(solution({ profession: 'nurse', experience: 15 }, 200)).toBe(
+              300,
             );
           });
-          it("should throw an error if the money is more than 500", () => {
-            expect(() =>
-              solution({ profession: "nurse", experience: i }, 400)
-            ).toThrowError(new Error("Too much dough"));
+          it('should throw an error if the money is more than 500', () => {
+            expect(() => solution({ profession: 'nurse', experience: i }, 400)).toThrowError(new Error('Too much dough'));
           });
-          it("should thow an error if the money is more than 500", () => {
-            expect(() =>
-              solution({ profession: "nurse", experience: i }, 600)
-            ).toThrowError(new Error("Too much dough"));
+          it('should thow an error if the money is more than 500', () => {
+            expect(() => solution({ profession: 'nurse', experience: i }, 600)).toThrowError(new Error('Too much dough'));
           });
         }
       });
-      describe("calculate the bonus for nurses with more than 20 years of experience", () => {
+      describe('calculate the bonus for nurses with more than 20 years of experience', () => {
         for (let i = 20; i < 55; i++) {
-          it("should multiply the bonus with 1.7 for 200", () => {
-            expect(solution({ profession: "nurse", experience: i }, 200)).toBe(
-              340
+          it('should multiply the bonus with 1.7 for 200', () => {
+            expect(solution({ profession: 'nurse', experience: i }, 200)).toBe(
+              340,
             );
           });
-          it("should multiply the bonus with 1.7 for 200", () => {
-            expect(solution({ profession: "nurse", experience: 20 }, 200)).toBe(
-              340
+          it('should multiply the bonus with 1.7 for 200', () => {
+            expect(solution({ profession: 'nurse', experience: 20 }, 200)).toBe(
+              340,
             );
           });
-          it("should throw an error if the money is more than 500", () => {
-            expect(() =>
-              solution({ profession: "nurse", experience: i }, 400)
-            ).toThrowError(new Error("Too much dough"));
+          it('should throw an error if the money is more than 500', () => {
+            expect(() => solution({ profession: 'nurse', experience: i }, 400)).toThrowError(new Error('Too much dough'));
           });
-          it("shoud thow an error if the money is more than 500", () => {
-            expect(() =>
-              solution({ profession: "nurse", experience: i }, 600)
-            ).toThrowError(new Error("Too much dough"));
+          it('shoud thow an error if the money is more than 500', () => {
+            expect(() => solution({ profession: 'nurse', experience: i }, 600)).toThrowError(new Error('Too much dough'));
           });
         }
       });
     });
-    describe("calculate bonus for the doctors", () => {
-      describe("calculate bonus for doctors with less than 10 years of experience", () => {
+    describe('calculate bonus for the doctors', () => {
+      describe('calculate bonus for doctors with less than 10 years of experience', () => {
         for (let i = 0; i < 10; i++) {
-          it("should multiply the bonus with 1.5 for 200", () => {
-            expect(solution({ profession: "doctor", experience: i }, 200)).toBe(
-              300
+          it('should multiply the bonus with 1.5 for 200', () => {
+            expect(solution({ profession: 'doctor', experience: i }, 200)).toBe(
+              300,
             );
           });
-          it("should multipky the bonus with 1.5 for 400", () => {
-            expect(solution({ profession: "doctor", experience: i }, 400)).toBe(
-              600
+          it('should multipky the bonus with 1.5 for 400', () => {
+            expect(solution({ profession: 'doctor', experience: i }, 400)).toBe(
+              600,
             );
           });
-          it("should multiply the bonus with 1.5 for 600", () => {
-            expect(solution({ profession: "doctor", experience: i }, 600)).toBe(
-              900
+          it('should multiply the bonus with 1.5 for 600', () => {
+            expect(solution({ profession: 'doctor', experience: i }, 600)).toBe(
+              900,
             );
           });
         }
       });
-      describe("calculate bonus for doctors with more than 10 years of experience", () => {
+      describe('calculate bonus for doctors with more than 10 years of experience', () => {
         for (let i = 10; i < 20; i++) {
-          it("should multiply the bonus with 2 for 200", () => {
-            expect(solution({ profession: "doctor", experience: i }, 200)).toBe(
-              400
+          it('should multiply the bonus with 2 for 200', () => {
+            expect(solution({ profession: 'doctor', experience: i }, 200)).toBe(
+              400,
             );
           });
-          it("should multiply the bonus with 2 for 200", () => {
-            expect(solution({ profession: "doctor", experience: 10 }, 200)).toBe(
-              400
+          it('should multiply the bonus with 2 for 200', () => {
+            expect(solution({ profession: 'doctor', experience: 10 }, 200)).toBe(
+              400,
             );
           });
-          it("should multiply the bonus with 2 for 400", () => {
-            expect(solution({ profession: "doctor", experience: i }, 400)).toBe(
-              800
+          it('should multiply the bonus with 2 for 400', () => {
+            expect(solution({ profession: 'doctor', experience: i }, 400)).toBe(
+              800,
             );
           });
-          it("should throw an error if the bonus is more than 1000", () => {
-            expect(() =>
-              solution({ profession: "doctor", experience: i }, 600)
-            ).toThrowError(new Error("Too much dough"));
+          it('should throw an error if the bonus is more than 1000', () => {
+            expect(() => solution({ profession: 'doctor', experience: i }, 600)).toThrowError(new Error('Too much dough'));
           });
         }
       });
-      describe("calculate bonus for doctors with more than 20 years of experience", () => {
-        for (let i = 20; i < 55; i++) {          it("should multiply the bonus with 3 for 200", () => {
-            expect(solution({ profession: "doctor", experience: i }, 200)).toBe(
-              600
+      describe('calculate bonus for doctors with more than 20 years of experience', () => {
+        for (let i = 20; i < 55; i++) {
+          it('should multiply the bonus with 3 for 200', () => {
+            expect(solution({ profession: 'doctor', experience: i }, 200)).toBe(
+              600,
             );
           });
-          it("should multiply the bonus with 3 for 200", () => {
-            expect(solution({ profession: "doctor", experience: 20 }, 200)).toBe(
-              600
+          it('should multiply the bonus with 3 for 200', () => {
+            expect(solution({ profession: 'doctor', experience: 20 }, 200)).toBe(
+              600,
             );
           });
-          it("should throw an error if the bonus is more than 1000", () => {
-            expect(() =>
-              solution({ profession: "doctor", experience: i }, 400)
-            ).toThrowError(new Error("Too much dough"));
+          it('should throw an error if the bonus is more than 1000', () => {
+            expect(() => solution({ profession: 'doctor', experience: i }, 400)).toThrowError(new Error('Too much dough'));
           });
-          it("should throw an error if the bonus is more than 1000", () => {
-            expect(() =>
-              solution({ profession: "doctor", experience: i }, 600)
-            ).toThrowError(new Error("Too much dough"));
+          it('should throw an error if the bonus is more than 1000', () => {
+            expect(() => solution({ profession: 'doctor', experience: i }, 600)).toThrowError(new Error('Too much dough'));
           });
         }
       });
-    }); 
-     describe("validate the profession", () =>{
-       describe("checks if the profession is right", () =>{      
-         it("Presesnts a string thas tells profession is not valid if the profession is not doctor or nurse", ()=>{
+    });
+    describe('validate the profession', () => {
+      describe('checks if the profession is right', () => {
+        it('Presesnts a string thas tells profession is not valid if the profession is not doctor or nurse', () => {
           expect(
-          solution({ profession: "janitor", experience: 12 }, 600)
-        ).toBe("Invalid Profession");
-         })
-         it("Presesnts a string thas tells profession is not valid if the profession is not doctor or nurse", ()=>{
+            solution({ profession: 'janitor', experience: 12 }, 600),
+          ).toBe('Invalid Profession');
+        });
+        it('Presesnts a string thas tells profession is not valid if the profession is not doctor or nurse', () => {
           expect(
-          solution({ profession: "psychologist", experience: 12 }, 600)
-        ).toBe("Invalid Profession");
-         })
-         it("Presesnts a string thas tells profession is not valid if the profession is not doctor or nurse", ()=>{
+            solution({ profession: 'psychologist', experience: 12 }, 600),
+          ).toBe('Invalid Profession');
+        });
+        it('Presesnts a string thas tells profession is not valid if the profession is not doctor or nurse', () => {
           expect(
-          solution({ profession: "clerk", experience: 12 }, 600)
-        ).toBe("Invalid Profession");
-         })
-         it("Presesnts a string thas tells profession is not valid if the profession is not doctor or nurse", ()=>{
+            solution({ profession: 'clerk', experience: 12 }, 600),
+          ).toBe('Invalid Profession');
+        });
+        it('Presesnts a string thas tells profession is not valid if the profession is not doctor or nurse', () => {
           expect(
-          solution({ profession: "anesthesiologist", experience: 12 }, 600)
-        ).toBe("Invalid Profession");
-         })
-       
-       });
-     })
+            solution({ profession: 'anesthesiologist', experience: 12 }, 600),
+          ).toBe('Invalid Profession');
+        });
+      });
+    });
   });
 }
 // =============== a minified solution you can use to test your test cases ===============
