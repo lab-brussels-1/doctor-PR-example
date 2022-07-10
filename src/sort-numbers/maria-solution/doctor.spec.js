@@ -56,11 +56,10 @@ const premium = (employee = {}, base) => {
       break;
     }
   }
-  if (
-    (Math.floor(base * indexation) > 500 && jobName === 'nurse')
-    // eslint-disable-next-line operator-linebreak
-    || (Math.floor(base * indexation) > 1000 && jobName === 'doctor')
-  ) {
+  if (Math.floor(base * indexation) > 500 && jobName === 'nurse') {
+    throw new Error('too much money');
+  }
+  if (Math.floor(base * indexation) > 1000 && jobName === 'doctor') {
     throw new Error('too much money');
   }
 
