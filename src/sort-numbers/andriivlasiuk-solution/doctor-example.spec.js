@@ -6,7 +6,6 @@
 /* 0. Starter Code
 
 */
-
 // =============== JSDoc description of the challenge ===============
 /**
  * The government is issuing corona money to healthcare workers
