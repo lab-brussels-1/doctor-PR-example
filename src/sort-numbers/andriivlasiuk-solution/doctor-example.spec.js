@@ -1,3 +1,4 @@
+/* eslint-disable jsdoc/check-indentation */
 // #todo
 
 // 'use strict';
@@ -11,6 +12,7 @@
  * The government is issuing corona money to healthcare workers
  * The actual premium has not been decided yet
  * For doctors, the rules are as following:
+ * eslint-disable-next-line jsdoc/check-indentation
  *  Less than 10-year experience: x1,5
  *  More than 10 or equal: x2
  *  More than 20 or equal: x3
@@ -36,6 +38,7 @@
  * @param {number} - The base premium
  * @return {number} The premium rounded down to an integer~
  */
+// eslint-disable-next-line no-unused-vars
 const dataBase = {
   profession: ['nurse', 'doctor', 'therapist', 'psychologist'],
 };
@@ -81,9 +84,7 @@ for (const solution of [calculatePremium]) {
           );
         });
         it('If bonus 600 x 2 = 1200 --> Throw an error bonus never can be more than: 1000', () => {
-          expect(() =>
-            solution({ profession: 'doctor', experience: i }, 600),
-          ).toThrowError(new Error('doctor bonus greater than 1000'));
+          expect(() => solution({ profession: 'doctor', experience: i }, 600)).toThrowError(new Error('doctor bonus greater than 1000'));
         });
       }
     });
@@ -95,14 +96,10 @@ for (const solution of [calculatePremium]) {
           );
         });
         it('If bonus 400 x 3 = 1200 --> Throw an error bonus never can be more than: 1000', () => {
-          expect(() =>
-            solution({ profession: 'doctor', experience: i }, 400),
-          ).toThrowError(new Error('doctor bonus greater than 1000'));
+          expect(() => solution({ profession: 'doctor', experience: i }, 400)).toThrowError(new Error('doctor bonus greater than 1000'));
         });
         it('If bonus 600 x 3 = 1800 --> Throw an error bonus never can be more than: 1000', () => {
-          expect(() =>
-            solution({ profession: 'doctor', experience: i }, 600),
-          ).toThrowError(new Error('doctor bonus greater than 1000'));
+          expect(() => solution({ profession: 'doctor', experience: i }, 600)).toThrowError(new Error('doctor bonus greater than 1000'));
         });
       }
     });
@@ -119,9 +116,7 @@ for (const solution of [calculatePremium]) {
           );
         });
         it('If bonus 600 x 1,2 = 720 --> Throw an error nurse bonus never can be more than: 500', () => {
-          expect(() =>
-            solution({ profession: 'nurse', experience: i }, 600),
-          ).toThrowError(new Error('nurse bonus greater than 500'));
+          expect(() => solution({ profession: 'nurse', experience: i }, 600)).toThrowError(new Error('nurse bonus greater than 500'));
         });
       }
     });
@@ -133,14 +128,10 @@ for (const solution of [calculatePremium]) {
           );
         });
         it('If bonus 400 x 1,3 = 520 --> Throw an error nurse bonus never can be more than: 500', () => {
-          expect(() =>
-            solution({ profession: 'nurse', experience: i }, 400),
-          ).toThrowError(new Error('nurse bonus greater than 500'));
+          expect(() => solution({ profession: 'nurse', experience: i }, 400)).toThrowError(new Error('nurse bonus greater than 500'));
         });
         it('If bonus 600 x 1,3 = 780 --> Throw an error nurse bonus never can be more than: 500', () => {
-          expect(() =>
-            solution({ profession: 'nurse', experience: i }, 600),
-          ).toThrowError(new Error('nurse bonus greater than 500'));
+          expect(() => solution({ profession: 'nurse', experience: i }, 600)).toThrowError(new Error('nurse bonus greater than 500'));
         });
       }
     });
@@ -152,33 +143,26 @@ for (const solution of [calculatePremium]) {
           );
         });
         it('If bonus 400 x 1.5 = 600 --> Throw an error nurse bonus never can be more than: 500', () => {
-          expect(() =>
-            solution({ profession: 'nurse', experience: i }, 400),
-          ).toThrowError(new Error('nurse bonus greater than 500'));
+          expect(() => solution({ profession: 'nurse', experience: i }, 400)).toThrowError(new Error('nurse bonus greater than 500'));
         });
         it('If bonus 600 x 1.5 = 900 --> Throw an error nurse bonus never can be more than: 500', () => {
-          expect(() =>
-            solution({ profession: 'nurse', experience: i }, 600),
-          ).toThrowError(new Error('nurse bonus greater than 500'));
+          expect(() => solution({ profession: 'nurse', experience: i }, 600)).toThrowError(new Error('nurse bonus greater than 500'));
         });
       }
     });
     describe('Calculate correct bonus for all nurses with experience more than 20 till 55 years', () => {
       for (let i = 20; i <= 55; i++) {
+        // eslint-disable-next-line sonarjs/no-identical-functions
         it('If experience more than 15 years its should multiply by x 1.7, if bonus = 200 x 1.7 = 340', () => {
           expect(solution({ profession: 'nurse', experience: i }, 200)).toBe(
             300,
           );
         });
         it('If bonus 400 x 1.7 = 680 --> Throw an error nurse bonus never can be more than: 500', () => {
-          expect(() =>
-            solution({ profession: 'nurse', experience: i }, 400),
-          ).toThrowError(new Error('nurse bonus greater than 500'));
+          expect(() => solution({ profession: 'nurse', experience: i }, 400)).toThrowError(new Error('nurse bonus greater than 500'));
         });
         it('If bonus 600 x 1.7 = 1020 --> Throw an error nurse bonus never can be more than: 500', () => {
-          expect(() =>
-            solution({ profession: 'nurse', experience: i }, 600),
-          ).toThrowError(new Error('nurse bonus greater than 500'));
+          expect(() => solution({ profession: 'nurse', experience: i }, 600)).toThrowError(new Error('nurse bonus greater than 500'));
         });
       }
     });
