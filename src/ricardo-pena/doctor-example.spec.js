@@ -1,16 +1,13 @@
 // #todo
 
-'use strict';
-
 /* 0. Starter Code
-
 
 */
 
 // =============== JSDoc description of the challenge ===============
-/** 
-* The government is issuing corona money to healthcareworkers  
-* The actual premium has not been decided yet  
+/**
+* The government is issuing corona money to healthcareworkers
+* The actual premium has not been decided yet
 * For doctors, the rules are as following:
 *  Less than 10-year experience: x1,5
 *  More than 10 or equal: x2
