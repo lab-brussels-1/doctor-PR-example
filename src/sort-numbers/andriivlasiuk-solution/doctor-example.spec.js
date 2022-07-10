@@ -42,9 +42,53 @@
 const dataBase = {
   profession: ['nurse', 'doctor', 'therapist', 'psychologist'],
 };
-const calculatePremium = () => {};
-// =============== your solutions will go here ===============
 
+// =============== your solutions will go here ===============
+const calculatePremium = (healthCareWorker = {}, basePremium) => {
+  let premium;
+  const employees = [
+    {
+      profession: 'doctor',
+      experience: [10, 20, 30],
+    },
+    {
+      profession: 'nurse',
+      experience: [10, 15, 20, 30],
+    },
+  ];
+
+  if (healthCareWorker.profession === 'doctor') {
+    // check years of experience and calculate premium
+    if (healthCareWorker.experience < 10) {
+      premium = basePremium * 1.5;
+    } else if (healthCareWorker.experience < 20) {
+      premium = basePremium * 2;
+    } else {
+      premium = basePremium * 3;
+    }
+    if (premium > 1000) {
+      throw new Error('premium can not exceed 1000');
+    }
+  } else if (healthCareWorker.profession === 'nurse') {
+    // check years of experience and calculate premium
+    if (healthCareWorker.experience >= 20) {
+      premium = basePremium * 1.7;
+    } else if (healthCareWorker.experience >= 15) {
+      premium = basePremium * 1.5;
+    } else if (healthCareWorker.experience >= 10) {
+      premium = basePremium * 1.3;
+    } else if (healthCareWorker.experience < 10) {
+      premium = basePremium * 1.2;
+      if (premium > 500) {
+        throw new Error('premium can not exceed 500');
+      }
+    }
+    // for therapists and psychologists
+  } else {
+    premium = basePremium;
+  }
+  return premium;
+};
 // =============== a for-of loop to control which solution(s) are tested ===============
 
 for (const solution of [calculatePremium]) {
