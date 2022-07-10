@@ -28,18 +28,18 @@ const bonus = (employee, premium) => {
   if (employee.profession === 'doctor' && employee.experience < 10) {
     bonuses = premium * 1.5;
   } else if (
-    employee.profession === 'doctor'
-    && employee.experience >= 10
-    && employee.experience < 20
+    employee.profession === 'doctor' &&
+    employee.experience >= 10 &&
+    employee.experience < 20
   ) {
     bonuses = premium * 2;
     if (bonuses >= 1000) {
       throw new Error('Too much dough');
     }
   } else if (
-    employee.profession === 'doctor'
-    && employee.experience >= 20
-    && employee.experience < 55
+    employee.profession === 'doctor' &&
+    employee.experience >= 20 &&
+    employee.experience < 55
   ) {
     bonuses = premium * 3;
     if (bonuses >= 1000) {
@@ -52,9 +52,9 @@ const bonus = (employee, premium) => {
       throw new Error('Too much dough');
     }
   } else if (
-    employee.profession === 'nurse'
-    && employee.experience >= 10
-    && employee.experience < 15
+    employee.profession === 'nurse' &&
+    employee.experience >= 10 &&
+    employee.experience < 15
   ) {
     bonuses = premium * 1.3;
 
@@ -62,9 +62,9 @@ const bonus = (employee, premium) => {
       throw new Error('Too much dough');
     }
   } else if (
-    employee.profession === 'nurse'
-    && employee.experience >= 15
-    && employee.experience < 20
+    employee.profession === 'nurse' &&
+    employee.experience >= 15 &&
+    employee.experience < 20
   ) {
     bonuses = premium * 1.5;
 
@@ -77,8 +77,8 @@ const bonus = (employee, premium) => {
       throw new Error('Too much dough');
     }
   } else if (
-    employee.profession !== 'nurse'
-    || employee.profession !== 'doctor'
+    employee.profession !== 'nurse' ||
+    employee.profession !== 'doctor'
   ) {
     return 'Invalid Profession';
   }
