@@ -44,51 +44,37 @@ const dataBase = {
 };
 
 // =============== your solutions will go here ===============
-const calculatePremium = (healthCareWorker = {}, basePremium) => {
-  let premium;
-  const employees = [
-    {
-      profession: 'doctor',
-      experience: [10, 20, 30],
-    },
-    {
-      profession: 'nurse',
-      experience: [10, 15, 20, 30],
-    },
-  ];
-
-  if (healthCareWorker.profession === 'doctor') {
-    // check years of experience and calculate premium
-    if (healthCareWorker.experience < 10) {
-      premium = basePremium * 1.5;
-    } else if (healthCareWorker.experience < 20) {
-      premium = basePremium * 2;
-    } else {
-      premium = basePremium * 3;
+const calculatePremium = (employee = {}, premium = 0) => {
+  let payout = 0;
+  if (employee.profession === 'doctor') {
+    if (employee.experience >= 10 && employee.experience < 20) {
+      payout = premium * 2;
+    } else if (employee.experience >= 20) {
+      payout = premium * 3;
+    } else if (employee.experience < 10) {
+      payout = premium * 1.5;
     }
-    if (premium > 1000) {
-      throw new Error('premium can not exceed 1000');
+    if (payout > 1000) {
+      throw new Error('doctor bonus greater than 1000');
     }
-  } else if (healthCareWorker.profession === 'nurse') {
-    // check years of experience and calculate premium
-    if (healthCareWorker.experience >= 20) {
-      premium = basePremium * 1.7;
-    } else if (healthCareWorker.experience >= 15) {
-      premium = basePremium * 1.5;
-    } else if (healthCareWorker.experience >= 10) {
-      premium = basePremium * 1.3;
-    } else if (healthCareWorker.experience < 10) {
-      premium = basePremium * 1.2;
-      if (premium > 500) {
-        throw new Error('premium can not exceed 500');
-      }
+  } else if (employee.profession === 'nurse') {
+    if (employee.experience < 10) {
+      payout = premium * 1.2;
+    } else if (employee.experience >= 10 && employee.experience < 15) {
+      payout = premium * 1.3;
+    } else if (employee.experience >= 15 && employee.experience < 20) {
+      payout = premium * 1.5;
+    } else if (employee.experience >= 20) {
+      payout = premium * 1.7;
     }
-    // for therapists and psychologists
-  } else {
-    premium = basePremium;
+    if (payout > 500) {
+      throw new Error('nurse bonus greater than 500');
+    }
   }
-  return premium;
+  payout = Math.floor(payout);
+  return payout;
 };
+
 // =============== a for-of loop to control which solution(s) are tested ===============
 
 for (const solution of [calculatePremium]) {
@@ -195,7 +181,7 @@ for (const solution of [calculatePremium]) {
         // eslint-disable-next-line sonarjs/no-identical-functions
         it('If experience more than 15 years its should multiply by x 1.7, if bonus = 200 x 1.7 = 340', () => {
           expect(solution({ profession: 'nurse', experience: i }, 200)).toBe(
-            300,
+            340,
           );
         });
         it('If bonus 400 x 1.7 = 680 --> Throw an error nurse bonus never can be more than: 500', () => {
