@@ -29,14 +29,12 @@
     experience: 11
 }
 
-    
-  
 /**
  * Calculate the premium for healthcareworkers
  *
- * @param {object} - The healthcareworker object that is passed to the function
- * @param {number} - The base premium
- * @return {number} The premium rounded down to an integer~
+ * - @param {object} - The healthcareworker object that is passed to the function
+ * - @param {number} - The base premium
+ * - @return {number} The premium rounded down to an integer~
  */
 
 // =============== your solutions will go here ===============
