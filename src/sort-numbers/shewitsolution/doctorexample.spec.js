@@ -9,7 +9,7 @@
 
 // =============== JSDoc description of the challenge ===============
 /** 
-* The government is issuing corona money to healthcareworkers
+* The government is issuing corona money to healthcareworkers.
 * The actual premium has not been decided yet
 * For doctors, the rules are as following:
 *  Less than 10-year experience: x1,5
