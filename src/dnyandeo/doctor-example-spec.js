@@ -267,6 +267,7 @@ describe(`${solution.name}: _`, () => {
 describe(`${solution.name}: _`, () => {
   describe('premium for nurses', () => {
     describe('When the premium is 500', () => {
+      // eslint-disable-next-line sonarjs/no-identical-functions
       it('Should multiply by x1.7 when she has less than 10 year experience, if premium more then 500 throw error', () => {
         expect(
           () =>
