@@ -26,13 +26,13 @@
 }.
  */
 
-/** ........................
- * Calculate the premium for healthcareworkers
+/** ...................................
+ * Calculate the premium for healthcareworkers.
  *
- * @param {object} - The healthcareworker object that is passed to the function
- * @param {number} - The base premium
- * @return {number} The premium rounded down to an integer~
- */
+// * @param {object} - The healthcareworker object that is passed to the function.
+//  * @param {number} - The base premium
+//  * @return {number} The premium rounded down to an integer~.
+//  */
 
 // =============== your solutions will go here ===============
 const solution = (healthCareWorker = {}, number) => {
@@ -311,9 +311,7 @@ describe(`${solution.name}: _`, () => {
   describe('premium for nurses', () => {
     describe('When the premium is 500', () => {
       it('Should multiply by x 3 when she has 20 year experience, if premium more then 500 throw error', () => {
-        expect(() =>
-          solution({ profession: 'doctor', experience: 20 }, 500),
-        ).toThrowError();
+        expect(() => solution({ profession: 'doctor', experience: 20 }, 500)).toThrowError();
       });
     });
   });
@@ -323,9 +321,7 @@ describe(`${solution.name}: _`, () => {
   describe('premium for nurses', () => {
     describe('When the premium is 500', () => {
       it('Should multiply by x1.7 when she has less than 10 year experience, if premium more then 500 throw error', () => {
-        expect(() =>
-          solution({ profession: 'doctor', experience: 20 }, 500),
-        ).toThrowError();
+        expect(() => solution({ profession: 'doctor', experience: 20 }, 500)).toThrowError();
       });
     });
   });
@@ -335,9 +331,7 @@ describe(`${solution.name}: _`, () => {
   describe('premium for nurses', () => {
     describe('When the premium is 500', () => {
       it('Should multiply by x1.2 when she has less than 10 year experience, if premium more then 500 throw error', () => {
-        expect(() =>
-          solution({ profession: 'nurse', experience: 8 }, 500),
-        ).toThrowError();
+        expect(() => solution({ profession: 'nurse', experience: 8 }, 500)).toThrowError();
       });
     });
   });
