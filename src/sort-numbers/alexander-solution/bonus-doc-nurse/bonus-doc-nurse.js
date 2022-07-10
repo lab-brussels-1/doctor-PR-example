@@ -1,4 +1,4 @@
-export function bonus(employee, premium) {
+export const bonus(employee, premium) {
   let bonuses = 0;
   const ted = {
     profession: 'nurse',
