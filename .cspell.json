@@ -1,6 +1,9 @@
 {
   "language": "en",
-  "words": [],
+  "words": [
+    "healthcareworker",
+    "healthcareworkers"
+  ],
   "ignorePaths": [
     "node_modules/**",
     "package.json",
