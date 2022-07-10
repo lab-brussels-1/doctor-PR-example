@@ -4,61 +4,9 @@
 
 */
 
-// =============== JSDoc description of the challenge ===============
-/**
-* The government is issuing corona money to healthcareworkers
-* The actual premium has not been decided yet
-* For doctors, the rules are as following:
-*  Less than 10-year experience: x1,5
-*  More than 10 or equal: x2
-*  More than 20 or equal: x3
-*  Never more than: 1000 (throw an error)
-* For nurses:
-*  Less than 10-year experience: x1,2
-*  More than 10 or equal: x1,3
-*  More than 15 or equal: x1,5
-*  More than 20 or equal: x1,7
-*  Never more than: 500 (throw an error)
-* Any other profession should not get a premium (but no error should be thrown)
-*
-* {
-    profession: "nurse" | "doctor" | "therapist" | "psychologist" ,
-    experience: 11
-}
-
-/**
- * Calculate the premium for healthcareworkers
- *
- * - @param {object} - The healthcareworker object that is passed to the function
- * - @param {number} - The base premium
- * - @return {number} The premium rounded down to an integer~
- */
-
 // =============== your solutions will go here ===============
 
 const solution = (healthCareWorker = {}, percentage) => {
-  // const employee = [{
-  //       profession: 'doctor',
-  //       experience: [10, 20, 55],
-  //       premiumPer: [1.5, 2, 3]
-  //     },
-  //     {
-  //       profession: 'nurse',
-  //       experience: [10, 15, 20],
-  //       premiumPer: [1.2, 1.3, 1.5, 1.7]
-
-  //     },
-  //     {
-  //     profession: 'therapist',
-  //     experience: [10, 15, 20],
-  //     premiumPer: [0, 0, 0, 0]
-  //   },
-  //   {
-  //     profession: 'psychologist',
-  //     experience: [10, 15, 20],
-  //     premiumPer: [0, 0, 0, 0]
-  //   }
-  //   ];
   let premium = 0;
 
   if (healthCareWorker.profession === 'doctor') {
@@ -94,7 +42,7 @@ const solution = (healthCareWorker = {}, percentage) => {
 
 // TESTING AREA
 
-// Testing for 150
+// Testing for 200
 
 describe(solution.name + ': _', () => {
   describe('premium for doctors', () => {
@@ -310,9 +258,7 @@ describe(solution.name + ': _', () => {
   describe('premium for nurses', () => {
     describe('When the premium is 500', () => {
       it('Should multiply by x 3 when she has 20 year experience, if premium more then 500 throw error', () => {
-        expect(() =>
-          solution({ profession: 'doctor', experience: 20 }, 500),
-        ).toThrowError();
+        expect(() => solution({ profession: 'doctor', experience: 20 }, 500)).toThrowError();
       });
     });
   });
@@ -334,9 +280,7 @@ describe(solution.name + ': _', () => {
   describe('premium for nurses', () => {
     describe('When the premium is 500', () => {
       it('Should multiply by x1.2 when she has less than 10 year experience, if premium more then 500 throw error', () => {
-        expect(() =>
-          solution({ profession: 'nurse', experience: 8 }, 500),
-        ).toThrowError();
+        expect(() => solution({ profession: 'nurse', experience: 8 }, 500)).toThrowError();
       });
     });
   });
@@ -346,5 +290,4 @@ const letSomething = (a) => {
   return 'something ' + a;
 };
 
-let str = letSomething('like this');
-console.log(str);
+const str = letSomething('like this');
