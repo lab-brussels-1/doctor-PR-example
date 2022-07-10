@@ -1,6 +1,6 @@
 {
   "language": "en",
-  "words": [],
+  "words": ["healthcareworker", "linebreak", "sonarjs"],
   "ignorePaths": [
     "node_modules/**",
     "package.json",

@@ -27,12 +27,16 @@
     "cspell": "^5.6.6",
     "eslint": "^7.31.0",
     "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-formatter-codeframe": "^7.32.1",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jsdoc": "^32.3.1",
     "eslint-plugin-prefer-arrow": "^1.2.3",
     "eslint-plugin-sonarjs": "^0.9.1",
     "jest": "^26.6.3",
-    "markdownlint-cli": "^0.28.1",
+    "markdownlint-cli": "^0.31.1",
     "prettier": "^2.2.1"
+  },
+  "dependencies": {
+    "markdownlint": "^0.26.0"
   }
 }
