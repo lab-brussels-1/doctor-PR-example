@@ -252,7 +252,12 @@ describe(`${solution.name}: _`, () => {
   describe('premium for nurses', () => {
     describe('When the premium is 500', () => {
       it('Should multiply by x 3 when she has 20 year experience, if premium more then 500 throw error', () => {
-        expect(() => solution({ profession: 'doctor', experience: 20 }, 500)).toThrowError();
+        expect(
+          () =>
+            // eslint-disable-next-line implicit-arrow-linebreak
+            solution({ profession: 'doctor', experience: 20 }, 500),
+          // eslint-disable-next-line function-paren-newline
+        ).toThrowError();
       });
     });
   });
@@ -261,8 +266,14 @@ describe(`${solution.name}: _`, () => {
 describe(`${solution.name}: _`, () => {
   describe('premium for nurses', () => {
     describe('When the premium is 500', () => {
+      // eslint-disable-next-line sonarjs/no-identical-functions
       it('Should multiply by x1.7 when she has less than 10 year experience, if premium more then 500 throw error', () => {
-        expect(() => solution({ profession: 'doctor', experience: 20 }, 500)).toThrowError();
+        expect(
+          () =>
+            // eslint-disable-next-line implicit-arrow-linebreak
+            solution({ profession: 'doctor', experience: 20 }, 500),
+          // eslint-disable-next-line function-paren-newline
+        ).toThrowError();
       });
     });
   });
@@ -272,7 +283,12 @@ describe(`${solution.name}: _`, () => {
   describe('premium for nurses', () => {
     describe('When the premium is 500', () => {
       it('Should multiply by x1.2 when she has less than 10 year experience, if premium more then 500 throw error', () => {
-        expect(() => solution({ profession: 'nurse', experience: 8 }, 500)).toThrowError();
+        expect(
+          () =>
+            // eslint-disable-next-line implicit-arrow-linebreak
+            solution({ profession: 'nurse', experience: 8 }, 500),
+          // eslint-disable-next-line function-paren-newline
+        ).toThrowError();
       });
     });
   });
