@@ -1,6 +1,7 @@
+/* eslint-disable prefer-arrow/prefer-arrow-functions */
 // #todo
 
-'use strict';
+
 
 /* 0. Starter Code
 
@@ -8,34 +9,35 @@
 */
 
 // =============== JSDoc description of the challenge ===============
-/** 
-* The government is issuing corona money to healthcareworkers
-* The actual premium has not been decided yet
-* For doctors, the rules are as following:
-*  Less than 10-year experience: x1,5
-*  More than 10 or equal: x2
-*  More than 20 or equal: x3
-*  Never more than: 1000 (throw an error)
-* For nurses:
-*  Less than 10-year experience: x1,2
-*  More than 10 or equal: x1,3
-*  More than 15 or equal: x1,5
-*  More than 20 or equal: x1,7
-*  Never more than: 500 (throw an error)
-* Any other profession should not get a premium (but no error should be thrown)
-*
-* {
+/**
+ * The government is issuing corona money to healthcareworkers
+ * The actual premium has not been decided yet
+ * For doctors, the rules are as following:
+ *  Less than 10-year experience: x1,5
+ *  More than 10 or equal: x2
+ *  More than 20 or equal: x3
+ *  Never more than: 1000 (throw an error)
+ * For nurses:
+ *  Less than 10-year experience: x1,2
+ *  More than 10 or equal: x1,3
+ *  More than 15 or equal: x1,5
+ *  More than 20 or equal: x1,7
+ *  Never more than: 500 (throw an error)
+ * Any other profession should not get a premium (but no error should be thrown)
+ *
+ * {
     profession: "nurse" | "doctor" | "therapist" | "psychologist" ,
     experience: 11
 }
-*/
+ */
 
 /**
- * Calculate the premium for healthcareworkers
+- * Calculate the premium for healthcareworkers.
+
+- * @param {object} - The healthcareworker object that is passed to the function.
+- * @param {number} - The base premium.
  *
- * @param {object} - The healthcareworker object that is passed to the function
- * @param {number} - The base premium
- * @return {number} The premium rounded down to an integer~
+ * @returns {number} The premium rounded down to an integer.
  */
 
 // =============== your solutions will go here ===============
@@ -46,6 +48,11 @@
 // };
 // bonus(alex, 200);
 
+// eslint-disable-next-line sonarjs/cognitive-complexity
+/**
+ *
+ */
+// eslint-disable-next-line sonarjs/cognitive-complexity
 function bonus(employee = {}, premium = 0) {
   let payout = 0;
   if (employee.profession === 'doctor') {
@@ -116,9 +123,7 @@ for (const solution of [bonus]) {
             );
           });
           it('600 * 2 = ERROR', () => {
-            expect(() =>
-              solution({ profession: 'doctor', experience: i }, 600),
-            ).toThrowError(new Error('doctor bonus greater than 1000'));
+            expect(() => solution({ profession: 'doctor', experience: i }, 600)).toThrowError(new Error('doctor bonus greater than 1000'));
           });
         }
       });
@@ -130,14 +135,11 @@ for (const solution of [bonus]) {
             );
           });
           it('400 * 3 = ERROR', () => {
-            expect(() =>
-              solution({ profession: 'doctor', experience: i }, 400),
+            expect(() => solution({ profession: 'doctor', experience: i }, 400),
             ).toThrowError(new Error('doctor bonus greater than 1000'));
           });
           it('600 * 3 = ERROR', () => {
-            expect(() =>
-              solution({ profession: 'doctor', experience: i }, 600),
-            ).toThrowError(new Error('doctor bonus greater than 1000'));
+            expect(() => solution({ profession: 'doctor', experience: i }, 600)).toThrowError(new Error('doctor bonus greater than 1000'));
           });
         }
       });
@@ -156,8 +158,7 @@ for (const solution of [bonus]) {
             );
           });
           it('return 600 * 1.2 = ERROR for less than 10y exp', () => {
-            expect(() =>
-              solution({ profession: 'nurse', experience: i }, 600),
+            expect(() => solution({ profession: 'nurse', experience: i }, 600),
             ).toThrowError(new Error('nurse bonus greater than 500'));
           });
         }
@@ -170,13 +171,11 @@ for (const solution of [bonus]) {
             );
           });
           it('400 * 1.3 = ERROR', () => {
-            expect(() =>
-              solution({ profession: 'nurse', experience: i }, 400),
+            expect(() => solution({ profession: 'nurse', experience: i }, 400),
             ).toThrowError(new Error('nurse bonus greater than 500'));
           });
           it('600 * 1.3 = ERROR', () => {
-            expect(() =>
-              solution({ profession: 'nurse', experience: i }, 600),
+            expect(() => solution({ profession: 'nurse', experience: i }, 600),
             ).toThrowError(new Error('nurse bonus greater than 500'));
           });
         }
@@ -189,13 +188,11 @@ for (const solution of [bonus]) {
             );
           });
           it('400 * 1.5 = ERROR', () => {
-            expect(() =>
-              solution({ profession: 'nurse', experience: i }, 400),
+            expect(() => solution({ profession: 'nurse', experience: i }, 400),
             ).toThrowError(new Error('nurse bonus greater than 500'));
           });
           it('600 * 1.5 = ERROR', () => {
-            expect(() =>
-              solution({ profession: 'nurse', experience: i }, 600),
+            expect(() => solution({ profession: 'nurse', experience: i }, 600),
             ).toThrowError(new Error('nurse bonus greater than 500'));
           });
         }
@@ -208,14 +205,11 @@ for (const solution of [bonus]) {
             );
           });
           it('400 * 1.7 = ERROR', () => {
-            expect(() =>
-              solution({ profession: 'nurse', experience: i }, 400),
+            expect(() => solution({ profession: 'nurse', experience: i }, 400),
             ).toThrowError(new Error('nurse bonus greater than 500'));
           });
           it('600 * 1.7 = ERROR', () => {
-            expect(() =>
-              solution({ profession: 'nurse', experience: i }, 600),
-            ).toThrowError(new Error('nurse bonus greater than 500'));
+            expect(() => solution({ profession: 'nurse', experience: i }, 600)).toThrowError(new Error('nurse bonus greater than 500'));
           });
         }
       });
