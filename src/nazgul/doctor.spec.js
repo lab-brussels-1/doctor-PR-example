@@ -35,28 +35,28 @@
 
 // =============== your solutions will go here ===============
 const solution = (healthCareWorker = {}, number) => {
-  const employee = [
-    {
-      profession: 'doctor',
-      experience: [10, 20, 55],
-      year: [1.5, 2, 3],
-    },
-    {
-      profession: 'nurse',
-      experience: [10, 15, 20],
-      year: [1.2, 1.3, 1.5, 1.7],
-    },
-    {
-      profession: 'therapist',
-      experience: [10, 15, 20],
-      year: [0, 0, 0, 0],
-    },
-    {
-      profession: 'psychologist',
-      experience: [10, 15, 20],
-      year: [0, 0, 0, 0],
-    },
-  ];
+  // const employee = [
+  //   {
+  //     profession: 'doctor',
+  //     experience: [10, 20, 55],
+  //     year: [1.5, 2, 3],
+  //   },
+  //   {
+  //     profession: 'nurse',
+  //     experience: [10, 15, 20],
+  //     year: [1.2, 1.3, 1.5, 1.7],
+  //   },
+  //   {
+  //     profession: 'therapist',
+  //     experience: [10, 15, 20],
+  //     year: [0, 0, 0, 0],
+  //   },
+  //   {
+  //     profession: 'psychologist',
+  //     experience: [10, 15, 20],
+  //     year: [0, 0, 0, 0],
+  //   },
+  // ];
 
   let bonus = 0;
 
@@ -310,7 +310,9 @@ describe(`${solution.name}: _`, () => {
   describe('premium for nurses', () => {
     describe('When the premium is 500', () => {
       it('Should multiply by x 3 when she has 20 year experience, if premium more then 500 throw error', () => {
-        expect(() => solution({ profession: 'doctor', experience: 20 }, 500)).toThrowError();
+        expect(() =>
+          solution({ profession: 'doctor', experience: 20 }, 500),
+        ).toThrowError();
       });
     });
   });
@@ -320,7 +322,9 @@ describe(`${solution.name}: _`, () => {
   describe('premium for nurses', () => {
     describe('When the premium is 500', () => {
       it('Should multiply by x1.7 when she has less than 10 year experience, if premium more then 500 throw error', () => {
-        expect(() => solution({ profession: 'doctor', experience: 20 }, 500)).toThrowError();
+        expect(() =>
+          solution({ profession: 'doctor', experience: 20 }, 500),
+        ).toThrowError();
       });
     });
   });
@@ -330,7 +334,9 @@ describe(`${solution.name}: _`, () => {
   describe('premium for nurses', () => {
     describe('When the premium is 500', () => {
       it('Should multiply by x1.2 when she has less than 10 year experience, if premium more then 500 throw error', () => {
-        expect(() => solution({ profession: 'nurse', experience: 8 }, 500)).toThrowError();
+        expect(() =>
+          solution({ profession: 'nurse', experience: 8 }, 500),
+        ).toThrowError();
       });
     });
   });
