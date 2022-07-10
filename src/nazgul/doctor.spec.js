@@ -1,7 +1,4 @@
 // #todo
-
-'use strict';
-
 /* 0. Starter Code
  */
 
@@ -99,7 +96,7 @@ const solution = (healthCareWorker = {}, number) => {
 
 // ==================== Base on 200 Euro =====================
 
-describe(solution.name + ': _', () => {
+describe(`${solution.name}: _`, () => {
   describe('premium for doctors', () => {
     describe('When the premium is 200', () => {
       it('Should multiply by x 1.5 when she has less than 10 year experience', () => {
@@ -121,7 +118,7 @@ describe(solution.name + ': _', () => {
   });
 });
 
-describe(solution.name + ': _', () => {
+describe(`${solution.name}: _`, () => {
   describe('premium for nurses', () => {
     describe('When the premium is 200', () => {
       it('Should multiply by x1.2 when she has less than 10 year experience', () => {
@@ -148,7 +145,7 @@ describe(solution.name + ': _', () => {
 
 // ================== base on 300 Euro ========================
 
-describe(solution.name + ': _', () => {
+describe(`${solution.name}: _`, () => {
   describe('premium for doctors', () => {
     describe('When the premium is 300', () => {
       it('Should multiply by x 1.5 when she has less than 10 year experience', () => {
@@ -170,7 +167,7 @@ describe(solution.name + ': _', () => {
   });
 });
 
-describe(solution.name + ': _', () => {
+describe(`${solution.name}: _`, () => {
   describe('premium for nurses', () => {
     describe('When the premium is 300', () => {
       it('Should multiply by x1.2 when she has less than 10 year experience', () => {
@@ -197,7 +194,7 @@ describe(solution.name + ': _', () => {
 
 // ========================== Base on 500 Euro =================================
 
-describe(solution.name + ': _', () => {
+describe(`${solution.name}: _`, () => {
   describe('premium for doctors', () => {
     describe('When the premium is 500', () => {
       it('Should multiply by x 1.5 when she has less than 10 year experience', () => {
@@ -209,7 +206,7 @@ describe(solution.name + ': _', () => {
   });
 });
 
-describe(solution.name + ': _', () => {
+describe(`${solution.name}: _`, () => {
   describe('premium for nurses', () => {
     describe('When the premium is 500', () => {
       it('Should multiply by x 2 when she has more than 10 year experience', () => {
@@ -223,7 +220,7 @@ describe(solution.name + ': _', () => {
 
 // ========== Other profession like psychologist and therapist =====================
 
-describe(solution.name + ': _', () => {
+describe(`${solution.name}: _`, () => {
   describe('premium for psychologist', () => {
     describe('When the premium is 200', () => {
       it('Should zero premium for psychologist profession', () => {
@@ -235,7 +232,7 @@ describe(solution.name + ': _', () => {
   });
 });
 
-describe(solution.name + ': _', () => {
+describe(`${solution.name}: _`, () => {
   describe('premium for psychologist', () => {
     describe('When the premium is 300', () => {
       it('Should zero premium for psychologist profession', () => {
@@ -247,7 +244,7 @@ describe(solution.name + ': _', () => {
   });
 });
 
-describe(solution.name + ': _', () => {
+describe(`${solution.name}: _`, () => {
   describe('premium for psychologist', () => {
     describe('When the premium is 500', () => {
       it('Should zero premium for psychologist profession', () => {
@@ -259,7 +256,7 @@ describe(solution.name + ': _', () => {
   });
 });
 
-describe(solution.name + ': _', () => {
+describe(`${solution.name}: _`, () => {
   describe('premium for psychologist', () => {
     describe('When the premium is 500', () => {
       it('Should zero premium for psychologist profession', () => {
@@ -271,7 +268,7 @@ describe(solution.name + ': _', () => {
   });
 });
 
-describe(solution.name + ': _', () => {
+describe(`${solution.name}: _`, () => {
   describe('premium for therapist', () => {
     describe('When the premium is 200', () => {
       it('Should zero premium for therapist profession', () => {
@@ -283,7 +280,7 @@ describe(solution.name + ': _', () => {
   });
 });
 
-describe(solution.name + ': _', () => {
+describe(`${solution.name}: _`, () => {
   describe('premium for therapist', () => {
     describe('When the premium is 300', () => {
       it('Should zero premium for therapist profession', () => {
@@ -295,7 +292,7 @@ describe(solution.name + ': _', () => {
   });
 });
 
-describe(solution.name + ': _', () => {
+describe(`${solution.name}: _`, () => {
   describe('premium for therapist', () => {
     describe('When the premium is 500', () => {
       it('Should zero premium for therapist profession', () => {
@@ -309,7 +306,7 @@ describe(solution.name + ': _', () => {
 
 // ============================ Error testing =============================
 
-describe(solution.name + ': _', () => {
+describe(`${solution.name}: _`, () => {
   describe('premium for nurses', () => {
     describe('When the premium is 500', () => {
       it('Should multiply by x 3 when she has 20 year experience, if premium more then 500 throw error', () => {
@@ -321,7 +318,7 @@ describe(solution.name + ': _', () => {
   });
 });
 
-describe(solution.name + ': _', () => {
+describe(`${solution.name}: _`, () => {
   describe('premium for nurses', () => {
     describe('When the premium is 500', () => {
       it('Should multiply by x1.7 when she has less than 10 year experience, if premium more then 500 throw error', () => {
@@ -333,7 +330,7 @@ describe(solution.name + ': _', () => {
   });
 });
 
-describe(solution.name + ': _', () => {
+describe(`${solution.name}: _`, () => {
   describe('premium for nurses', () => {
     describe('When the premium is 500', () => {
       it('Should multiply by x1.2 when she has less than 10 year experience, if premium more then 500 throw error', () => {
