@@ -31,13 +31,6 @@
 }.
  */
 
-/** ..........
- * Calculate the premium for healthcare workers
- *
- * @param {object} - The healthcare worker object that is passed to the function
- * @param {number} - The base premium
- * @return {number} The premium rounded down to an integer~
- */
 // eslint-disable-next-line no-unused-vars
 const dataBase = {
   profession: ['nurse', 'doctor', 'therapist', 'psychologist'],
