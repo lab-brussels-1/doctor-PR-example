@@ -29,10 +29,6 @@
  */
 function bonus(employee, premium) {
   let bonuses = 0;
-  const ted = {
-    profession: 'nurse',
-    experience: '12',
-  };
 
   if (employee.profession === 'doctor' && employee.experience < 10) {
     bonuses = premium * 1.5;
@@ -94,15 +90,11 @@ function bonus(employee, premium) {
   return Math.floor(bonuses);
 }
 
-const tia = {
-  profession: 'nurse',
-  experience: '9',
-};
-console.log(bonus(tia, 200));
-
 // =============== a for-of loop to control which solution(s) are tested ===============
 
 // eslint-disable-next-line no-restricted-syntax
+import { bonus } from './bonus-doc-nurse.js';
+
 for (const solution of [bonus]) {
   // =============== test cases for this challenge ===============
   describe(`${solution.name}: calculates the bonus`, () => {

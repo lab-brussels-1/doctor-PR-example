@@ -1,4 +1,4 @@
-function bonus(employee, premium) {
+export function bonus(employee, premium) {
   let bonuses = 0;
   const ted = {
     profession: 'nurse',
@@ -43,9 +43,3 @@ function bonus(employee, premium) {
   }
   return Math.floor(bonuses);
 }
-
-const tia = {
-  profession: 'nurse',
-  experience: '9',
-};
-console.log(bonus(tia, 200));
