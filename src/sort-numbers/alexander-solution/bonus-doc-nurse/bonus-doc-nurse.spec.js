@@ -22,7 +22,7 @@
  */
 
 // =============== your solutions will go here ===============
-function bonus(employee, premium) {
+const bonus = (employee, premium) => {
   let bonuses = 0;
 
   if (employee.profession === 'doctor' && employee.experience < 10) {
@@ -83,7 +83,7 @@ function bonus(employee, premium) {
     return 'Invalid Profession';
   }
   return Math.floor(bonuses);
-}
+};
 /**
  * @param employee
  * @param premium
