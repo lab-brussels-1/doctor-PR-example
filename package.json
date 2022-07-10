@@ -33,5 +33,8 @@
     "jest": "^26.6.3",
     "markdownlint-cli": "^0.31.1",
     "prettier": "^2.2.1"
+  },
+  "dependencies": {
+    "markdownlint": "^0.26.0"
   }
 }
