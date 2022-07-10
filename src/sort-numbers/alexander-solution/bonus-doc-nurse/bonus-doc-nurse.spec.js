@@ -1,3 +1,4 @@
+/* eslint-disable operator-linebreak */
 // #todo
 
 /* 0. Starter Code
@@ -17,17 +18,19 @@
  *
  * @param {string} [text=''] - The string to repeat. Defaults to empty string.
  * @param {number} [repetitions=1] - How many times to repeat. Defaults to 1.
- *  Repetitions must be greater than zero, and must be an integer.
+ * Repetitions must be greater than zero, and must be an integer.
  * @returns {string} The text repeated as many times as repetitions.
  */
 
 // =============== your solutions will go here ===============
+// eslint-disable-next-line sonarjs/cognitive-complexity
 const bonus = (employee, premium) => {
   let bonuses = 0;
 
   if (employee.profession === 'doctor' && employee.experience < 10) {
     bonuses = premium * 1.5;
   } else if (
+    // eslint-disable-next-line operator-linebreak
     employee.profession === 'doctor' &&
     employee.experience >= 10 &&
     employee.experience < 20
